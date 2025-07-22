@@ -22,6 +22,7 @@ const cspHeader = `
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: false,
+  srcDir: 'src',
   swcMinify: false,
   output: 'standalone',
   experimental: {
@@ -36,6 +37,7 @@ module.exports = withBundleAnalyzer({
   async headers() {
     return [
       {
+  srcDir: 'src',
         source: '/(.*)',
         headers: [
           // {
