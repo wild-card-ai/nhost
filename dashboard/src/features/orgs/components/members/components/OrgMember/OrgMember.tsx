@@ -56,7 +56,7 @@ import {
   type GetOrganizationQuery,
 } from '@/utils/__generated__/graphql';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Ellipsis } from 'lucide-react';
+import { FiMoreHorizontal } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -199,7 +199,7 @@ export default function OrgMember({ member, isAdmin }: OrgMemberProps) {
               className="h-fit"
             >
               <Button variant="ghost" className="h-8 p-2">
-                <Ellipsis />
+                <FiMoreHorizontal />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent side="bottom" align="end" sideOffset={-5}>

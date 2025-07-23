@@ -85,6 +85,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      react-icons:
+        specifier: ^4.12.0
+        version: 4.12.0(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.26.10
@@ -1529,7 +1533,7 @@ importers:
         version: 0.73.2(eslint@8.57.0)(jest@29.7.0(@types/node@22.13.9)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.11(@swc/helpers@0.5.5))(@types/node@22.13.9)(typescript@5.0.4)))(prettier@2.8.8)(typescript@5.0.4)
       '@react-native/metro-config':
         specifier: 0.73.5
-        version: 0.73.5(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(encoding@0.1.13)
+        version: 0.73.5(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))
       '@react-native/typescript-config':
         specifier: 0.73.1
         version: 0.73.1
@@ -3774,7 +3778,7 @@ packages:
   '@graphql-codegen/client-preset@1.3.0':
     resolution: {integrity: sha512-aUdOvpFszAvDu4TdiucO/Jl1d/spCwZaYLnmrYFD6wKjzLlRAuHiLYV/UEcviTiLNX5vxpJ9lLMnoeuJXnBw2w==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-codegen/client-preset@4.2.5':
     resolution: {integrity: sha512-hAdB6HN8EDmkoBtr0bPUN/7NH6svzqbcTDMWBCRXPESXkl7y80po+IXrXUjsSrvhKG8xkNXgJNz/2mjwHzywcA==}
@@ -3810,7 +3814,7 @@ packages:
   '@graphql-codegen/plugin-helpers@4.2.0':
     resolution: {integrity: sha512-THFTCfg+46PXlXobYJ/OoCX6pzjI+9woQqCjdyKtgoI0tn3Xq2HUUCiidndxUpEYVrXb5pRiRXb7b/ZbMQqD0A==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-codegen/plugin-helpers@5.0.3':
     resolution: {integrity: sha512-yZ1rpULIWKBZqCDlvGIJRSyj1B2utkEdGmXZTBT/GVayP4hyRYlkd36AJV/LfEsVD8dnsKL5rLz2VTYmRNlJ5Q==}
@@ -3891,7 +3895,7 @@ packages:
   '@graphql-codegen/visitor-plugin-common@3.1.1':
     resolution: {integrity: sha512-uAfp+zu/009R3HUAuTK2AamR1bxIltM6rrYYI6EXSmkM3rFtFsLTuJhjUDj98HcUCszJZrADppz8KKLGRUVlNg==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-codegen/visitor-plugin-common@5.1.0':
     resolution: {integrity: sha512-eamQxtA9bjJqI2lU5eYoA1GbdMIRT2X8m8vhWYsVQVWD3qM7sx/IqJU0kx0J3Vd4/CSd36BzL6RKwksibytDIg==}
@@ -3943,7 +3947,7 @@ packages:
     resolution: {integrity: sha512-+NXaZd2MWbbrWHqU4EhXcrDbogeiCDmEbrAN+rMn4Nu2okDjn2MTFDbTIab87oEubQCH4Te1wDkWPKrzXup7+Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-tools/executor-legacy-ws@1.0.6':
     resolution: {integrity: sha512-lDSxz9VyyquOrvSuCCnld3256Hmd+QI2lkmkEv7d4mdzkxkK4ddAWW1geQiWrQvWmdsmcnGGlZ7gDGbhEExwqg==}
@@ -3984,7 +3988,7 @@ packages:
     resolution: {integrity: sha512-gNqukC+s7iHC7vQZmx1SEJQmLnOguBq+aqE2zV2+o1hxkExvKqyFli1SY/9gmukFIKpKutCIj+8yLOM+jARutw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-tools/import@7.0.1':
     resolution: {integrity: sha512-935uAjAS8UAeXThqHfYVr4HEAp6nHJ2sximZKO1RzUTq5WoALMAhhGARl0+ecm6X+cqNUwIChJbjtaa6P/ML0w==}
@@ -4018,7 +4022,7 @@ packages:
   '@graphql-tools/optimize@1.4.0':
     resolution: {integrity: sha512-dJs/2XvZp+wgHH8T5J2TqptT9/6uVzIYvA6uFACha+ufvdMBedkfR4b4GbT8jAKLRARiqRTxy3dctnwkTM2tdw==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-tools/optimize@2.0.0':
     resolution: {integrity: sha512-nhdT+CRGDZ+bk68ic+Jw1OZ99YCDIKYA5AlVAnBHJvMawSx9YQqQAIj4refNc1/LRieGiuWvhbG3jvPVYho0Dg==}
@@ -4035,7 +4039,7 @@ packages:
   '@graphql-tools/relay-operation-optimizer@6.5.18':
     resolution: {integrity: sha512-mc5VPyTeV+LwiM+DNvoDQfPqwQYhPV/cl5jOBjTgSniyaq8/86aODfMkrE2OduhQ5E00hqrkuL2Fdrgk0w1QJg==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-tools/relay-operation-optimizer@7.0.1':
     resolution: {integrity: sha512-y0ZrQ/iyqWZlsS/xrJfSir3TbVYJTYmMOu4TaSz6F4FRDTQ3ie43BlKkhf04rC28pnUOS4BO9pDcAo1D30l5+A==}
@@ -4103,7 +4107,7 @@ packages:
   '@graphql-yoga/node@2.13.13':
     resolution: {integrity: sha512-3NmdEq3BkuVLRbo5yUi401sBiwowSKgY8O1DN1RwYdHRr0nu2dXzlYEETf4XLymyP6mKsVfQgsy7HQjwsc1oNw==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@graphql-yoga/subscription@2.2.3':
     resolution: {integrity: sha512-It/Dfh+nW2ClTtmOylAa+o7fbKIRYRTH6jfKLj3YB75tkv/rFZ70bjlChDCrEMa46I+zDMg7+cdkrQOXov2fDg==}
@@ -5116,7 +5120,7 @@ packages:
   '@pothos/core@3.41.0':
     resolution: {integrity: sha512-Nb7uPDTXVjdrWqHs5aoD1r6JEdQ9FnJYlf7gv47o1b/bb8rVDAZQaviVvaChal7YQcyFGgCFb0/YNNHLNBEjNw==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
 
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
@@ -7841,7 +7845,7 @@ packages:
     peerDependencies:
       '@apollo/client': ^3.4.13
       '@vue/composition-api': ^1.0.0
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
       vue: ^2.6.0 || ^3.1.0
     peerDependenciesMeta:
       '@vue/composition-api':
@@ -14315,6 +14319,7 @@ packages:
 
   react-native-randombytes@3.6.1:
     resolution: {integrity: sha512-qxkwMbOZ0Hff1V7VqpaWrR6ItkA+oF6bnI79Qp9F3Tk8WBsdKDi6m1mi3dEdFWePoRLrhJ2L03rU0yabst1tVw==}
+    deprecated: use react-native-get-random-values instead
 
   react-native-reanimated@3.16.5:
     resolution: {integrity: sha512-mq/5k14pimkhCeP9XwFJkEr8XufaHqIekum8fqpsn0fcBzbLvyiqfM2LEuBvi0+DTv5Bd2dHmUHkYqGYfkj3Jw==}
@@ -16357,7 +16362,7 @@ packages:
   urql@3.0.4:
     resolution: {integrity: sha512-okmQKQ9pF4t8O8iCC5gH9acqfFji5lkhW3nLBjx8WKDd2zZG7PXoUpUK19VQEMK87L6VFBOO/XZ52MMKFEI0AA==}
     peerDependencies:
-      graphql: '>=16.8.1'
+      graphql: 16.8.1
       react: 18.2.0
 
   use-callback-ref@1.3.2:
@@ -23769,7 +23774,7 @@ snapshots:
       - supports-color
     optional: true
 
-  '@react-native/metro-config@0.73.5(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(encoding@0.1.13)':
+  '@react-native/metro-config@0.73.5(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))':
     dependencies:
       '@react-native/js-polyfills': 0.73.1
       '@react-native/metro-babel-transformer': 0.73.15(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))
@@ -23778,10 +23783,7 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/preset-env'
-      - bufferutil
-      - encoding
       - supports-color
-      - utf-8-validate
 
   '@react-native/normalize-colors@0.73.2': {}
 
@@ -29285,7 +29287,7 @@ snapshots:
       debug: 4.3.5
       enhanced-resolve: 5.17.1
       eslint: 8.48.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.48.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0))(eslint@8.48.0))(eslint@8.48.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.8.3))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.3
@@ -29325,7 +29327,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.48.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0))(eslint@8.48.0))(eslint@8.48.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -29429,7 +29431,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.48.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.48.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.48.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0))(eslint@8.48.0))(eslint@8.48.0)
       hasown: 2.0.2
       is-core-module: 2.16.0
       is-glob: 4.0.3

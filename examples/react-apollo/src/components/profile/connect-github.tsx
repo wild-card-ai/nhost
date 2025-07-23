@@ -5,7 +5,7 @@ import { gql } from '@apollo/client'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { useProviderLink } from '@nhost/react'
 import { useAuthQuery } from '@nhost/react-apollo'
-import { LoaderCircle } from 'lucide-react'
+import { FiLoader } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 export default function ConnectGithub() {
@@ -56,7 +56,7 @@ export default function ConnectGithub() {
           </Link>
         )}
 
-        {loading && <LoaderCircle className="w-5 h-5 animate-spin-fast" />}
+        {loading && <FiLoader className="w-5 h-5 animate-spin-fast" />}
       </CardContent>
     </Card>
   )

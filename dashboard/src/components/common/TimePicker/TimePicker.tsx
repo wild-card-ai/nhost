@@ -1,7 +1,7 @@
 'use client';
 
 import { Label } from '@/components/ui/v3/label';
-import { Clock } from 'lucide-react';
+import { FiClock } from 'react-icons/fi';
 import * as React from 'react';
 import { TimePickerInput } from './TimePickerInput';
 
@@ -55,7 +55,7 @@ function TimePicker({ date, setDate }: TimePickerProps) {
         />
       </div>
       <div className="flex h-10 items-center">
-        <Clock className="ml-2 h-4 w-4" />
+        <FiClock className="ml-2 h-4 w-4" />
       </div>
     </div>
   );

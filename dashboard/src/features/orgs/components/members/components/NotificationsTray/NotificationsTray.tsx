@@ -32,7 +32,7 @@ import {
   type PostOrganizationRequestResponse,
 } from '@/utils/__generated__/graphql';
 import { formatDistance } from 'date-fns';
-import { Bell } from 'lucide-react';
+import { FiBell } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -184,7 +184,7 @@ export default function NotificationsTray() {
             className="relative flex h-8 items-center gap-2 border px-2"
             aria-label="Notifications"
           >
-            <Bell className="h-4.5 w-4.5" />
+            <FiBell className="h-4.5 w-4.5" />
             {(pendingOrgRequest || invites.length > 0) && (
               <Badge variant="destructive">
                 {invites.length + (pendingOrgRequest ? 1 : 0)}

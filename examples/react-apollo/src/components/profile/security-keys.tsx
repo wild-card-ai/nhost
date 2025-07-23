@@ -13,7 +13,7 @@ import {
   useUserId
 } from '@nhost/react'
 import { useAuthQuery } from '@nhost/react-apollo'
-import { Fingerprint, Info, Plus, Trash } from 'lucide-react'
+import { FiUnlock, FiInfo, FiPlus, FiTrash } from 'react-icons/fi'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
@@ -146,14 +146,14 @@ export default function SecurityKeys() {
         <CardHeader className="flex flex-row items-center justify-between p-6">
           <CardTitle>Security keys</CardTitle>
           <Button className="m-0" onClick={() => setShowAddSecurityDialog(true)}>
-            <Plus />
+            <FiPlus />
             Add
           </Button>
         </CardHeader>
         <CardContent>
           {keys.length === 0 && (
             <Alert className="w-full">
-              <Info className="w-4 h-4" />
+              <FiInfo className="w-4 h-4" />
               <AlertTitle>No security keys</AlertTitle>
               <AlertDescription className="mt-2">
                 You can add a security key by clicking <b>Register new device</b>
@@ -167,12 +167,12 @@ export default function SecurityKeys() {
                 className="flex flex-row items-center justify-between w-full px-4 py-2 border rounded-md"
               >
                 <div className="flex flex-row gap-2">
-                  <Fingerprint />
+                  <FiUnlock />
                   <span className="">{key.nickname || key.id}</span>
                 </div>
 
                 <Button variant="ghost" onClick={() => handleDeleteSecurityKey(key.id)}>
-                  <Trash />
+                  <FiTrash />
                 </Button>
               </div>
             ))}

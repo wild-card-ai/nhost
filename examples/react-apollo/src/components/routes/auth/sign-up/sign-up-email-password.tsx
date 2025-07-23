@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useSignUpEmailPassword } from '@nhost/react'
-import { ArrowLeft } from 'lucide-react'
+import { FiArrowLeft } from 'react-icons/fi'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
@@ -115,7 +115,7 @@ export default function SignUpEmailPassword() {
         </Form>
 
         <Link to="/sign-up" className={cn(buttonVariants({ variant: 'link' }), 'my-2')}>
-          <ArrowLeft className="w-4 h-4" />
+          <FiArrowLeft className="w-4 h-4" />
           Other sign-up options
         </Link>
 

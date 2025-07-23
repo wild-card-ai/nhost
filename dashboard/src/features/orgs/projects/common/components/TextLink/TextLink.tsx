@@ -1,4 +1,4 @@
-import { SquareArrowUpRightIcon } from 'lucide-react';
+import { FiExternalLink } from 'react-icons/fi';
 import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 
@@ -16,7 +16,7 @@ function TextLink({
       rel="noopener noreferrer"
     >
       {children}
-      {withIcon && <SquareArrowUpRightIcon className="h-4 w-4" />}
+      {withIcon && <FiExternalLink className="h-4 w-4" />}
     </Link>
   );
 }

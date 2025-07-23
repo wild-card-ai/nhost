@@ -15,7 +15,7 @@ import {
 import { useMetadataQuery } from '@/features/orgs/projects/database/dataGrid/hooks/useMetadataQuery';
 import { useTableQuery } from '@/features/orgs/projects/database/dataGrid/hooks/useTableQuery';
 import { cn } from '@/lib/utils';
-import { Check, ChevronLeft, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronLeft, FiChevronsUp } from 'react-icons/fi';
 
 import useRuleGroupEditor from '@/features/orgs/projects/database/dataGrid/components/RuleGroupEditor/useRuleGroupEditor';
 import { CommandLoading } from 'cmdk';
@@ -226,7 +226,7 @@ function ColumnAutocomplete(
               {selectedColumn?.label || 'Select a column'}
             </span>
           )}
-          <ChevronsUpDown className="ml-2 h-5 w-5 shrink-0 opacity-50" />
+          <FiChevronsUp className="ml-2 h-5 w-5 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent
@@ -267,7 +267,7 @@ function ColumnAutocomplete(
                 className="h-8 w-8"
                 onClick={handleBackRelationship}
               >
-                <ChevronLeft className="h-5 w-5" />
+                <FiChevronLeft className="h-5 w-5" />
               </Button>
               <span className="py-1.5 text-sm text-muted-foreground">
                 {defaultTable}.{pages.join('.')}
@@ -289,7 +289,7 @@ function ColumnAutocomplete(
                       onSelect={handleChange}
                       className="overflow-x-hidden"
                     >
-                      <Check
+                      <FiCheck
                         className={cn(
                           'mr-2 h-4 w-4',
                           value === option.value ? 'opacity-100' : 'opacity-0',
@@ -336,7 +336,7 @@ function ColumnAutocomplete(
                       value={option.value}
                       onSelect={handleChange}
                     >
-                      <Check
+                      <FiCheck
                         className={cn(
                           'mr-2 h-4 w-4',
                           value === option.value ? 'opacity-100' : 'opacity-0',

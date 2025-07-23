@@ -31,7 +31,7 @@ import {
   useGetOrganizationPlansQuery,
 } from '@/utils/__generated__/graphql';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Slash } from 'lucide-react';
+import { FiSlash } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -154,7 +154,7 @@ export default function SubscriptionPlan() {
                   <span className="text-xl font-semibold">
                     ${org?.plan?.price}
                   </span>
-                  <Slash
+                  <FiSlash
                     className="h-5 w-5 text-muted-foreground/40"
                     strokeWidth={2.5}
                   />

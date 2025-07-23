@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useResetPassword } from '@nhost/react'
-import { ArrowLeft } from 'lucide-react'
+import { FiArrowLeft } from 'react-icons/fi'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
@@ -62,7 +62,7 @@ export default function ForgotPassword() {
           <Separator className="my-2" />
 
           <Link to="/sign-in/email-password" className={buttonVariants({ variant: 'link' })}>
-            <ArrowLeft className="w-4 h-4" />
+            <FiArrowLeft className="w-4 h-4" />
             Sign in with email + password
           </Link>
         </Form>

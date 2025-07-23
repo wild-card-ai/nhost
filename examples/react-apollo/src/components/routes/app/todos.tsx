@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { gql, useMutation } from '@apollo/client'
 import { useAuthQuery } from '@nhost/react-apollo'
-import { Check, Info, Plus, Trash } from 'lucide-react'
+import { FiCheck, FiInfo, FiPlus, FiTrash } from 'react-icons/fi'
 import { useState } from 'react'
 import { toast } from 'sonner'
 
@@ -98,14 +98,14 @@ export default function Todos() {
               onKeyDown={(e) => e.code === 'Enter' && handleAddTodo()}
             />
             <Button className="m-0" onClick={handleAddTodo}>
-              <Plus />
+              <FiPlus />
               Add
             </Button>
           </div>
           <div>
             {data?.todos.length === 0 && (
               <Alert className="w-full">
-                <Info className="w-4 h-4" />
+                <FiInfo className="w-4 h-4" />
                 <AlertTitle>Empty</AlertTitle>
                 <AlertDescription className="mt-2">Start by adding a todo</AlertDescription>
               </Alert>
@@ -116,11 +116,11 @@ export default function Todos() {
                 className="flex flex-row items-center justify-between w-full p-4 border-b last:pb-0 last:border-b-0"
               >
                 <div className="flex flex-row gap-2">
-                  <Check className="w-5 h-5" />
+                  <FiCheck className="w-5 h-5" />
                   <span>{todo.contents}</span>
                 </div>
                 <Button variant="ghost" onClick={() => handleDeleteTodo(todo.id)}>
-                  <Trash className="w-5 h-5" />
+                  <FiTrash className="w-5 h-5" />
                 </Button>
               </div>
             ))}

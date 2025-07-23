@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { useSignOut } from '@nhost/react'
-import { Archive, LogOut, PanelLeft, User } from 'lucide-react'
+import { FiArchive, FiLogOut, FiSidebar, FiUser } from 'react-icons/fi'
 import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 
@@ -40,7 +40,7 @@ export default function Layout() {
                 to="/profile"
                 className="flex items-center justify-center transition-colors rounded-lg h-9 w-9 text-muted-foreground hover:text-foreground md:h-8 md:w-8 aria-[current]:bg-accent aria-[current]:text-accent-foreground"
               >
-                <User className="w-5 h-5" />
+                <FiUser className="w-5 h-5" />
                 <span className="sr-only">Profile</span>
               </NavLink>
             </TooltipTrigger>
@@ -53,7 +53,7 @@ export default function Layout() {
                 to="/storage"
                 className="flex items-center justify-center transition-colors rounded-lg h-9 w-9 text-muted-foreground hover:text-foreground md:h-8 md:w-8 aria-[current]:bg-accent aria-[current]:text-accent-foreground"
               >
-                <Archive className="w-5 h-5" />
+                <FiArchive className="w-5 h-5" />
                 <span className="sr-only">Storage</span>
               </NavLink>
             </TooltipTrigger>
@@ -67,7 +67,7 @@ export default function Layout() {
                 onClick={handleSignOut}
                 className="flex items-center justify-center transition-colors rounded-lg h-9 w-9 text-muted-foreground hover:text-foreground md:h-8 md:w-8"
               >
-                <LogOut className="w-5 h-5" />
+                <FiLogOut className="w-5 h-5" />
                 <span className="sr-only">Sign out</span>
               </NavLink>
             </TooltipTrigger>
@@ -80,8 +80,8 @@ export default function Layout() {
           <Sheet open={showMobileNav} onOpenChange={(open) => setShowMobileNav(open)}>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
-                <PanelLeft className="w-5 h-5" />
-                <span className="sr-only">Toggle Menu</span>
+                <FiSidebar className="w-5 h-5" />
+                <span className="sr-only">Toggle FiMenu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="sm:max-w-xs">
@@ -100,7 +100,7 @@ export default function Layout() {
                   onClick={() => setShowMobileNav(false)}
                   className="flex items-center gap-4 p-2 rounded-md aria-[current]:bg-accent aria-[current]:text-accent-foreground text-muted-foreground"
                 >
-                  <User className="w-5 h-5" />
+                  <FiUser className="w-5 h-5" />
                   Profile
                 </NavLink>
 
@@ -109,7 +109,7 @@ export default function Layout() {
                   onClick={() => setShowMobileNav(false)}
                   className="flex items-center gap-4 p-2 rounded-md aria-[current]:bg-accent aria-[current]:text-accent-foreground text-muted-foreground"
                 >
-                  <Archive className="w-5 h-5" />
+                  <FiArchive className="w-5 h-5" />
                   Storage
                 </NavLink>
               </nav>

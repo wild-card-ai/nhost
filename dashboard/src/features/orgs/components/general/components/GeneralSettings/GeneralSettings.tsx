@@ -15,7 +15,7 @@ import { execPromiseWithErrorToast } from '@/features/orgs/utils/execPromiseWith
 import { useUpdateOrganizationMutation } from '@/utils/__generated__/graphql';
 import { getToastStyleProps } from '@/utils/constants/settings';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CopyIcon } from 'lucide-react';
+import { FiCopy } from 'react-icons/fi';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
@@ -83,7 +83,7 @@ export default function GeneralSettings() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex w-full flex-col rounded-md border bg-background">
           <div className="w-full border-b p-4 font-medium">
-            General Settings
+            General FiSettings
           </div>
 
           <div className="flex w-full flex-col gap-4 p-4 sm:max-w-lg">
@@ -116,7 +116,7 @@ export default function GeneralSettings() {
                   type="button"
                   variant="ghost"
                 >
-                  <CopyIcon className="h-4 w-4" />
+                  <FiCopy className="h-4 w-4" />
                 </Button>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import usePiTRBaseBackups from '@/features/orgs/hooks/usePiTRBaseBackups/usePiTRBaseBackups';
 import { cn, isEmptyValue } from '@/lib/utils';
-import { Info, SquareArrowUpRightIcon } from 'lucide-react';
+import { FiInfo, FiExternalLink } from 'react-icons/fi';
 import Link from 'next/link';
 import EarliestBackup from './EarliestBackup';
 import RestoreBackupDialogButton from './RestoreBackupDialogButton';
@@ -14,7 +14,7 @@ function LearnMoreAboutPiTRLink() {
       rel="noopener noreferrer"
     >
       Learn more about Point-in-Time Recovery{' '}
-      <SquareArrowUpRightIcon className="h-4 w-4" />
+      <FiExternalLink className="h-4 w-4" />
     </Link>
   );
 }
@@ -54,7 +54,7 @@ function PointInTimeBackupInfo({
           <div>
             <p className="text-[0.75rem]">Latest backup</p>
             <div className="flex items-center gap-2">
-              <Info className="h-4 w-4" />
+              <FiInfo className="h-4 w-4" />
               <p>
                 Restore available up to current time. System will restore up to
                 closest available target time if exact time unavailable.

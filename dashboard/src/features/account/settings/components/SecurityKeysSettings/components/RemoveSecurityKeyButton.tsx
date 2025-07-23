@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/v3/button';
 import useRemoveSecurityKey from '@/features/account/settings/components/SecurityKeysSettings/hooks/useRemoveSecurityKey';
 import { execPromiseWithErrorToast } from '@/features/orgs/utils/execPromiseWithErrorToast';
-import { Trash } from 'lucide-react';
+import { FiTrash } from 'react-icons/fi';
 import { memo } from 'react';
 
 interface Props {
@@ -26,7 +26,7 @@ function RemoveSecurityKeyButton({ id }: Props) {
       onClick={handleClick}
       aria-label={`Remove security key ${id}`}
     >
-      <Trash />
+      <FiTrash />
     </Button>
   );
 }

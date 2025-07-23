@@ -4,7 +4,7 @@
 
 import { buttonVariants } from '@/components/ui/v3/button';
 import { cn } from '@/lib/utils';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { DayPicker, type DayPickerProps } from 'react-day-picker';
 
 export type CalendarProps = DayPickerProps & {
@@ -51,7 +51,7 @@ export type CalendarProps = DayPickerProps & {
  * @default yearRange 12
  * @returns
  */
-function Calendar({
+function FiCalendar({
   className,
   showOutsideDays = true,
   numberOfMonths,
@@ -168,7 +168,7 @@ function Calendar({
       }}
       components={{
         Chevron: ({ orientation }) => {
-          const Icon = orientation === 'left' ? ChevronLeft : ChevronRight;
+          const Icon = orientation === 'left' ? FiChevronLeft : FiChevronRight;
           return <Icon className="h-4 w-4" />;
         },
       }}
@@ -177,6 +177,6 @@ function Calendar({
     />
   );
 }
-Calendar.displayName = 'Calendar';
+FiCalendar.displayName = 'FiCalendar';
 
-export { Calendar };
+export { FiCalendar };

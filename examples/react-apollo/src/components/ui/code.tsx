@@ -1,7 +1,7 @@
 import { CodeBlock } from 'react-code-block'
 import { themes } from 'prism-react-renderer'
 import { Button } from './button'
-import { Copy } from 'lucide-react'
+import { FiCopy } from 'react-icons/fi'
 import { toast } from 'sonner'
 
 interface CodeBlockProps {
@@ -24,7 +24,7 @@ export default function Code({ code, language }: CodeBlockProps) {
           </CodeBlock.LineContent>
         </CodeBlock.Code>
         <Button className="absolute top-2 right-2" variant="outline" onClick={copyToClipboard}>
-          <Copy className="w-5 h-5" />
+          <FiCopy className="w-5 h-5" />
         </Button>
       </div>
     </CodeBlock>

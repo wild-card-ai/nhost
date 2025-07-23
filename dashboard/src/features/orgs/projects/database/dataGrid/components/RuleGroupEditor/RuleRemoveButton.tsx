@@ -3,7 +3,7 @@ import type {
   Rule,
   RuleGroup,
 } from '@/features/orgs/projects/database/dataGrid/types/dataBrowser';
-import { X } from 'lucide-react';
+import { FiX } from 'react-icons/fi';
 import { useWatch } from 'react-hook-form';
 import { twMerge } from 'tailwind-merge';
 
@@ -44,7 +44,7 @@ function RuleRemoveButton({
       aria-label="Remove Rule"
       onClick={onRemove}
     >
-      <X className="h-4 w-4" />
+      <FiX className="h-4 w-4" />
     </Button>
   );
 }

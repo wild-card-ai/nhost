@@ -1,5 +1,5 @@
 import { MfaOtpForm } from '@/components/common/MfaOtpForm';
-import { Smartphone } from 'lucide-react';
+import { FiSmartphone } from 'react-icons/fi';
 
 interface Props {
   sendMfaOtp: (code: string) => Promise<any>;
@@ -11,7 +11,7 @@ function MfaSignInOtpForm({ sendMfaOtp, loading, requestNewMfaTicket }: Props) {
   return (
     <div className="ws-full relative grid grid-flow-row gap-4 bg-transparent">
       <div className="flex w-full flex-col items-center justify-center gap-3">
-        <Smartphone size={32} />
+        <FiSmartphone size={32} />
         <h2 className="text-[1.25rem]">Authentication Code</h2>
       </div>
       <MfaOtpForm

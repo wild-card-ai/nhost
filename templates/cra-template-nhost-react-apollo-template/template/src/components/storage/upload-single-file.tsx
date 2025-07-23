@@ -1,5 +1,5 @@
 import { useFileUpload } from '@nhost/react'
-import { CircleCheckBig, LoaderCircle, Upload, X } from 'lucide-react'
+import { FiCheckCircle, FiLoader, FiUpload, FiX } from 'react-icons/fi'
 import { useDropzone } from 'react-dropzone'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -19,7 +19,7 @@ export default function UploadSingleFile() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Upload a single file</CardTitle>
+        <CardTitle>FiUpload a single file</CardTitle>
       </CardHeader>
       <CardContent>
         <div
@@ -33,17 +33,17 @@ export default function UploadSingleFile() {
 
           {isUploaded ? (
             <div className="flex flex-col items-center justify-center gap-2 text-green-600">
-              <CircleCheckBig className="w-5 h-5" />
+              <FiCheckCircle className="w-5 h-5" />
               <span>Uploaded successfully</span>
             </div>
           ) : isUploading ? (
             <div className="flex flex-col items-center justify-center gap-2">
-              <LoaderCircle className="w-5 h-5 animate-spin-fast text-slate-500" />
+              <FiLoader className="w-5 h-5 animate-spin-fast text-slate-500" />
               <span>Uploading</span>
             </div>
           ) : isError ? (
             <div className="flex flex-col items-center justify-center gap-2 text-red-600">
-              <X className="w-5 h-5" />
+              <FiX className="w-5 h-5" />
               <span>Uploaded with error</span>
             </div>
           ) : (
@@ -53,7 +53,7 @@ export default function UploadSingleFile() {
                 isDragActive && 'text-blue-500'
               )}
             >
-              <Upload className="w-5 h-5" />
+              <FiUpload className="w-5 h-5" />
               <p>Drop a file here or click to select a file</p>
             </div>
           )}

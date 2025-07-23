@@ -27,7 +27,7 @@ import {
 } from '@/utils/__generated__/graphql';
 import { z } from 'zod';
 
-import { Ellipsis } from 'lucide-react';
+import { FiMoreHorizontal } from 'react-icons/fi';
 
 import {
   Dialog,
@@ -158,7 +158,7 @@ export default function OrgInvite({ invite, isAdmin }: InviteProps) {
           <DropdownMenu open={dropDownOpen} onOpenChange={setDropDownOpen}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" disabled={!isAdmin}>
-                <Ellipsis />
+                <FiMoreHorizontal />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent side="bottom" align="end" sideOffset={-5}>

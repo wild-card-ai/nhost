@@ -1,7 +1,7 @@
 import { gql, useMutation } from '@apollo/client'
 import { useElevateSecurityKeyEmail, useUserData } from '@nhost/react'
 import { useAuthQuery } from '@nhost/react-apollo'
-import { Info, Plus, Trash } from 'lucide-react'
+import { FiInfo, FiPlus, FiTrash } from 'react-icons/fi'
 import { useState } from 'react'
 import { toast } from 'sonner'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
@@ -160,14 +160,14 @@ export default function ProtectedNotes() {
               onKeyDown={(e) => e.code === 'Enter' && add()}
             />
             <Button className="m-0" onClick={() => add()}>
-              <Plus />
+              <FiPlus />
               Add
             </Button>
           </div>
           <div>
             {data?.notes.length === 0 && (
               <Alert className="w-full">
-                <Info className="w-4 h-4" />
+                <FiInfo className="w-4 h-4" />
                 <AlertTitle>Empty</AlertTitle>
                 <AlertDescription className="mt-2">Start by adding a note</AlertDescription>
               </Alert>
@@ -182,7 +182,7 @@ export default function ProtectedNotes() {
                     <span>{note.content}</span>
                   </div>
                   <Button variant="ghost" onClick={() => deleteNote(note.id)}>
-                    <Trash className="w-5 h-5" />
+                    <FiTrash className="w-5 h-5" />
                   </Button>
                 </div>
                 <Separator className="last:hidden" />

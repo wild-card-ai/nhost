@@ -2,7 +2,7 @@ import { Button, type ButtonProps } from '@/components/ui/v3/button';
 import { isNotEmptyValue } from '@/lib/utils';
 import { copy } from '@/utils/copy';
 import { clsx } from 'clsx';
-import { Copy } from 'lucide-react';
+import { FiCopy } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 
 function CopyToClipboardButton({
@@ -53,7 +53,7 @@ function CopyToClipboardButton({
       {...props}
     >
       {props.children}
-      <Copy className="top-5 h-4 w-4" />
+      <FiCopy className="top-5 h-4 w-4" />
     </Button>
   );
 }

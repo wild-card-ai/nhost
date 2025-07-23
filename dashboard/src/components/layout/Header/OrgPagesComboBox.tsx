@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/v3/popover';
 
 import { useIsPlatform } from '@/features/orgs/projects/common/hooks/useIsPlatform';
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 import { useEffect, useMemo, useState } from 'react';
 
 type Option = {
@@ -28,7 +28,7 @@ type Option = {
 };
 
 const orgPages = [
-  { label: 'Settings', value: 'settings' },
+  { label: 'FiSettings', value: 'settings' },
   { label: 'Projects', value: 'projects' },
   { label: 'Members', value: 'members' },
   { label: 'Billing', value: 'billing' },
@@ -78,7 +78,7 @@ export default function OrgPagesComboBox() {
           ) : (
             <>Select a page</>
           )}
-          <ChevronsUpDown className="h-5 w-5 text-muted-foreground" />
+          <FiChevronsUp className="h-5 w-5 text-muted-foreground" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0" side="bottom" align="start">
@@ -97,7 +97,7 @@ export default function OrgPagesComboBox() {
                     push(`/orgs/${orgSlug}/${option.value}`);
                   }}
                 >
-                  <Check
+                  <FiCheck
                     className={cn(
                       'mr-2 h-4 w-4',
                       selectedOrgPage?.value === option.value

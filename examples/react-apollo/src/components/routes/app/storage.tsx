@@ -13,7 +13,7 @@ import {
 import { gql } from '@apollo/client'
 import { useNhostClient } from '@nhost/react'
 import { useAuthQuery } from '@nhost/react-apollo'
-import { DownloadCloudIcon } from 'lucide-react'
+import { FiCloud } from 'react-icons/fi'
 
 export default function Storage() {
   const nhost = useNhostClient()
@@ -82,7 +82,7 @@ export default function Storage() {
                   <TableCell>{file.createdAt}</TableCell>
                   <TableCell>
                     <Button variant="ghost" onClick={() => handleDownloadFile(file.id, file.name)}>
-                      <DownloadCloudIcon />
+                      <FiCloud />
                     </Button>
                   </TableCell>
                 </TableRow>
