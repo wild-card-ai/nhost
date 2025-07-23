@@ -1,6 +1,6 @@
 import { useCurrentOrg } from '@/features/orgs/projects/hooks/useCurrentOrg';
 import { Organization_Status_Enum } from '@/utils/__generated__/graphql';
-import { TriangleAlert } from 'lucide-react';
+import { FiAlertTriangle } from 'react-icons/fi';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -15,7 +15,7 @@ function StatusBanner({
   return (
     <div className="m-4 rounded-lg bg-destructive p-4 text-white">
       <div className="flex items-center gap-2">
-        <TriangleAlert className="h-4 w-4" />
+        <FiAlertTriangle className="h-4 w-4" />
         <h3 className="font-medium">{title}</h3>
       </div>
       <p>{description}</p>

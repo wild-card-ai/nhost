@@ -17,7 +17,7 @@ import { ProjectStatusIndicator } from '@/features/orgs/components/common/Projec
 import { useAppState } from '@/features/orgs/projects/common/hooks/useAppState';
 import { useOrgs } from '@/features/orgs/projects/hooks/useOrgs';
 import { cn } from '@/lib/utils';
-import { Box, Check, ChevronsUpDown } from 'lucide-react';
+import { FiBox, FiCheck, FiChevronsUp } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -80,7 +80,7 @@ export default function ProjectsComboBox() {
             ) : (
               <>Select a project</>
             )}
-            <ChevronsUpDown className="h-5 w-5 text-muted-foreground" />
+            <FiChevronsUp className="h-5 w-5 text-muted-foreground" />
           </Button>
         </PopoverTrigger>
         <PopoverContent className="p-0" side="bottom" align="start">
@@ -95,7 +95,7 @@ export default function ProjectsComboBox() {
                     value={option.value}
                     onSelect={() => handleProjectSelect(option)}
                   >
-                    <Check
+                    <FiCheck
                       className={cn(
                         'mr-2 h-4 w-4',
                         selectedProject?.value === option.value
@@ -104,7 +104,7 @@ export default function ProjectsComboBox() {
                       )}
                     />
                     <div className="flex items-center gap-1">
-                      <Box className="h-4 w-4" />
+                      <FiBox className="h-4 w-4" />
                       <span className="max-w-52 truncate">{option.label}</span>
                     </div>
                   </CommandItem>

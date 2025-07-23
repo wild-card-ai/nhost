@@ -5,7 +5,7 @@ import { DeploymentStatusMessage } from '@/features/orgs/projects/deployments/co
 import { useCurrentOrg } from '@/features/orgs/projects/hooks/useCurrentOrg';
 import { type GetProjectsQuery } from '@/utils/__generated__/graphql';
 import debounce from 'lodash.debounce';
-import { ArrowRight, Box, Plus, SearchIcon } from 'lucide-react';
+import { FiArrowRight, FiBox, FiPlus, FiSearch } from 'react-icons/fi';
 import Link from 'next/link';
 import { useState, type ChangeEvent } from 'react';
 
@@ -22,7 +22,7 @@ function ProjectCard({ project }: { project: Project }) {
       className="flex h-44 cursor-pointer flex-col gap-4 rounded-lg border bg-background p-4 hover:shadow-sm"
     >
       <div className="flex flex-row items-start gap-2">
-        <Box className="mt-[2px] h-5 w-5 flex-shrink-0" />
+        <FiBox className="mt-[2px] h-5 w-5 flex-shrink-0" />
         <div className="flex w-full flex-col overflow-hidden">
           <p title={project.name} className="truncate font-bold">
             {project.name}
@@ -39,7 +39,7 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="flex w-full justify-end">
-        <ArrowRight />
+        <FiArrowRight />
       </div>
     </Link>
   );
@@ -70,7 +70,7 @@ export default function ProjectsGrid({ projects }: ProjectGridProps) {
           className="max-w-lg"
           startAdornment={
             <div className="flex w-8 items-center justify-center">
-              <SearchIcon className="h-5 w-4 text-muted-foreground" />
+              <FiSearch className="h-5 w-4 text-muted-foreground" />
             </div>
           }
           onChange={handleQueryChange}
@@ -79,7 +79,7 @@ export default function ProjectsGrid({ projects }: ProjectGridProps) {
         <Button asChild>
           <Link href={`/orgs/${org?.slug}/projects/new`}>
             <div className="flex h-fit flex-row items-center justify-center space-x-2">
-              <Plus className="h-5 w-5" strokeWidth={2} />
+              <FiPlus className="h-5 w-5" strokeWidth={2} />
               <span>Create project</span>
             </div>
           </Link>

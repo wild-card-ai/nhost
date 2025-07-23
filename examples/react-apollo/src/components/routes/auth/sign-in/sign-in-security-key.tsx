@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import { useSignInSecurityKey } from '@nhost/react'
-import { ArrowLeft } from 'lucide-react'
+import { FiArrowLeft } from 'react-icons/fi'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
@@ -36,7 +36,7 @@ export default function SignInSecurityKey() {
         </Button>
 
         <Link to="/sign-in" className={cn(buttonVariants({ variant: 'link' }), 'my-2')}>
-          <ArrowLeft className="w-4 h-4" />
+          <FiArrowLeft className="w-4 h-4" />
           Other sign-in options
         </Link>
 

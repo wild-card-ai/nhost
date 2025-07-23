@@ -1,7 +1,7 @@
 import { Spinner } from '@/components/ui/v3/spinner';
 import useGetSecurityKeys from '@/features/account/settings/hooks/useGetSecurityKeys';
 import { InfoAlert } from '@/features/orgs/components/InfoAlert';
-import { Fingerprint } from 'lucide-react';
+import { FiUnlock } from 'react-icons/fi';
 import { memo } from 'react';
 import RemoveSecurityKeyButton from './RemoveSecurityKeyButton';
 
@@ -14,7 +14,7 @@ function SecurityKey({ id, nickname }: SecurityKeyProps) {
   return (
     <div className="flex w-full items-center justify-between rounded-lg border border-[#EAEDF0] px-2 py-2 dark:border-[#2F363D]">
       <div className="flex justify-start gap-3">
-        <Fingerprint />
+        <FiUnlock />
         <span>{nickname || id}</span>
       </div>
       <RemoveSecurityKeyButton id={id} />

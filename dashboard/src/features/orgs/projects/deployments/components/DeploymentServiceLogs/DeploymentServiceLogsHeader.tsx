@@ -1,12 +1,12 @@
 import { Form } from '@/components/form/Form';
 import { ActivityIndicator } from '@/components/ui/v2/ActivityIndicator';
-import { Box } from '@/components/ui/v2/Box';
+import { FiBox } from '@/components/ui/v2/FiBox';
 import { Button } from '@/components/ui/v2/Button';
 import { LogsRegexFilter } from '@/features/orgs/projects/common/components/LogsRegexFilter';
 import { LogsServiceFilter } from '@/features/orgs/projects/common/components/LogsServiceFilter';
 import { AvailableLogsService } from '@/features/orgs/projects/logs/utils/constants/services';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { SearchIcon } from 'lucide-react';
+import { FiSearch } from 'react-icons/fi';
 import { memo, useEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
@@ -44,7 +44,7 @@ function DeploymentLogsHeader({ onSubmit, loading, from, to }: Props) {
   }, [service, getValues, onSubmit]);
 
   return (
-    <Box className="h-[180px] w-full pb-5 pt-8">
+    <FiBox className="h-[180px] w-full pb-5 pt-8">
       <FormProvider {...form}>
         <div className="pb-4">
           <h3 className="text-2xl">Service Logs</h3>
@@ -64,17 +64,17 @@ function DeploymentLogsHeader({ onSubmit, loading, from, to }: Props) {
                 {loading ? (
                   <ActivityIndicator className="h-5 w-5" />
                 ) : (
-                  <SearchIcon className="h-5 w-5" />
+                  <FiSearch className="h-5 w-5" />
                 )}
               </div>
             }
             disabled={loading}
           >
-            Search
+            FiSearch
           </Button>
         </Form>
       </FormProvider>
-    </Box>
+    </FiBox>
   );
 }
 

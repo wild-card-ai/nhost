@@ -21,7 +21,7 @@ import {
   useInsertAnnouncementReadMutation,
 } from '@/utils/__generated__/graphql';
 import { formatDistance } from 'date-fns';
-import { EllipsisVertical, Megaphone } from 'lucide-react';
+import { FiMoreVertical, FiVolume2 } from 'react-icons/fi';
 import Link from 'next/link';
 
 export default function AnnouncementsTray() {
@@ -68,7 +68,7 @@ export default function AnnouncementsTray() {
           variant="outline"
           className="relative flex h-8 items-center gap-2 px-2"
         >
-          <Megaphone className="h-4.5 w-4.5" />
+          <FiVolume2 className="h-4.5 w-4.5" />
           {unreadAnnouncementsCount > 0 && (
             <Badge variant="destructive">{unreadAnnouncementsCount}</Badge>
           )}
@@ -144,7 +144,7 @@ export default function AnnouncementsTray() {
                           }}
                         >
                           <div className="absolute">
-                            <EllipsisVertical className="h-4 w-4" />
+                            <FiMoreVertical className="h-4 w-4" />
                           </div>
                         </Button>
                       </DropdownMenuTrigger>

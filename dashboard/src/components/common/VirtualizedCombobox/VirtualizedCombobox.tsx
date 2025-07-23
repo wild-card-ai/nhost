@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/v3/popover';
 import { cn } from '@/lib/utils';
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 import * as React from 'react';
 
 type Option = {
@@ -156,7 +156,7 @@ function VirtualizedCommand<O extends Option>({
                 onMouseLeave={() => !isKeyboardNavActive && setFocusedIndex(-1)}
                 onSelect={() => onSelectOption?.(filteredOptions[focusedIndex])}
               >
-                <Check
+                <FiCheck
                   className={cn(
                     'mr-2 h-4 w-4',
                     selectedOption ===
@@ -189,7 +189,7 @@ interface VirtualizedComboboxProps<O extends Option> {
 
 function VirtualizedCombobox<O extends Option>({
   options,
-  searchPlaceholder = 'Search items...',
+  searchPlaceholder = 'FiSearch items...',
   width,
   height,
   button,
@@ -212,7 +212,7 @@ function VirtualizedCombobox<O extends Option>({
       {selectedOption
         ? options.find((option) => option.value === selectedOption).value
         : searchPlaceholder}
-      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+      <FiChevronsUp className="ml-2 h-4 w-4 shrink-0 opacity-50" />
     </Button>
   );
 

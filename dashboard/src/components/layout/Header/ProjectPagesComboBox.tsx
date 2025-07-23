@@ -9,8 +9,8 @@ import {
 } from '@/components/ui/v3/command';
 
 import {
-  Check,
-  ChevronsUpDown,
+  FiCheck,
+  FiChevronsUp,
   CloudIcon,
   CogIcon,
   DatabaseIcon,
@@ -19,7 +19,7 @@ import {
   HomeIcon,
   RocketIcon,
   UserIcon,
-} from 'lucide-react';
+} from 'react-icons/fi';
 
 import { AIIcon } from '@/components/ui/v2/icons/AIIcon';
 import { GraphQLIcon } from '@/components/ui/v2/icons/GraphQLIcon';
@@ -142,7 +142,7 @@ export default function ProjectPagesComboBox() {
         disabled: !isPlatform,
       },
       {
-        label: 'Settings',
+        label: 'FiSettings',
         value: 'settings',
         icon: <CogIcon className="h-4 w-4" />,
         slug: 'settings',
@@ -197,7 +197,7 @@ export default function ProjectPagesComboBox() {
           ) : (
             <>Select a page</>
           )}
-          <ChevronsUpDown className="h-5 w-5 text-muted-foreground" />
+          <FiChevronsUp className="h-5 w-5 text-muted-foreground" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0" side="bottom" align="start">
@@ -219,7 +219,7 @@ export default function ProjectPagesComboBox() {
                     );
                   }}
                 >
-                  <Check
+                  <FiCheck
                     className={cn(
                       'mr-2 h-4 w-4',
                       selectedProjectPage?.value === option.value

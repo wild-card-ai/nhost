@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/v3/button';
 import { useSSRLocalStorage } from '@/hooks/useSSRLocalStorage';
-import { X } from 'lucide-react';
+import { FiX } from 'react-icons/fi';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -84,7 +84,7 @@ export default function CookieConsent({ onAccept }: CookieConsentProps) {
             className="text-[#A2B3BE] hover:text-white"
             aria-label="Close cookie banner"
           >
-            <X size={16} />
+            <FiX size={16} />
           </button>
         </div>
       </div>

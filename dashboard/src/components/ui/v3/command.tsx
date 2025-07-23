@@ -1,6 +1,6 @@
 import { type DialogProps } from '@radix-ui/react-dialog';
 import { Command as CommandPrimitive, useCommandState } from 'cmdk';
-import { PlusIcon, Search } from 'lucide-react';
+import { FiPlus, FiSearch } from 'react-icons/fi';
 import * as React from 'react';
 
 import { Dialog, DialogContent } from '@/components/ui/v3/dialog';
@@ -46,7 +46,7 @@ const CommandInput = React.forwardRef<
     CommandInputProps
 >(({ className, prefix, prefixClassName, ...props }, ref) => (
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+    <FiSearch className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     {prefix && (
       <span
         title={prefix}
@@ -167,7 +167,7 @@ const CommandCreateItem = ({
 
   return (
     <CommandItem forceMount value="create" onSelect={() => onCreate(query)}>
-      <PlusIcon className="mr-2" /> {query}
+      <FiPlus className="mr-2" /> {query}
     </CommandItem>
   );
 };

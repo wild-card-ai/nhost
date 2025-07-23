@@ -1,5 +1,5 @@
 import { useAuthenticationStatus } from '@nhost/react'
-import { LoaderCircle } from 'lucide-react'
+import { FiLoader } from 'react-icons/fi'
 import { FC, PropsWithChildren } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ export const AuthGate: FC<PropsWithChildren<unknown>> = ({ children }) => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <LoaderCircle className="w-10 h-10 animate-spin text-slate-500" />
+        <FiLoader className="w-10 h-10 animate-spin text-slate-500" />
       </div>
     )
   }

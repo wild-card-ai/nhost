@@ -1,5 +1,5 @@
 import { format, parseISO } from 'date-fns';
-import { CalendarClock, PlayIcon } from 'lucide-react';
+import { FiClock, FiPlay } from 'react-icons/fi';
 
 interface DeploymentInfoProps {
   from: string;
@@ -18,14 +18,14 @@ function DeploymentInfo({ from, to }: DeploymentInfoProps) {
       {deploymentInProgress ? (
         <p className="inline-flex items-center justify-center gap-3">
           <span className="flex items-center justify-center gap-2">
-            <PlayIcon size={14} />
+            <FiPlay size={14} />
             Deployment in progress
           </span>{' '}
           <span>•</span> <span>Started at: {startedAt}</span>
         </p>
       ) : (
         <div className="inline-flex items-center justify-center gap-3">
-          <CalendarClock size={16} /> <span>Showing logs from:</span>{' '}
+          <FiClock size={16} /> <span>Showing logs from:</span>{' '}
           <span>
             {startedAt} - {endedAt}
           </span>

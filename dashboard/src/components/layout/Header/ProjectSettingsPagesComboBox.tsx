@@ -14,7 +14,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/v3/popover';
 import { cn } from '@/lib/utils';
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -131,7 +131,7 @@ export default function ProjectSettingsPagesComboBox() {
           ) : (
             <>Select a page</>
           )}
-          <ChevronsUpDown className="h-5 w-5 text-muted-foreground" />
+          <FiChevronsUp className="h-5 w-5 text-muted-foreground" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0" side="bottom" align="start">
@@ -152,7 +152,7 @@ export default function ProjectSettingsPagesComboBox() {
                     );
                   }}
                 >
-                  <Check
+                  <FiCheck
                     className={cn(
                       'mr-2 h-4 w-4',
                       selectedSettingsPage?.value === option.value

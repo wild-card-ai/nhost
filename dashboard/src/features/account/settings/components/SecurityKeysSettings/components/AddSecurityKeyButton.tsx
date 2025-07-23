@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/v3/dialog';
-import { Plus } from 'lucide-react';
+import { FiPlus } from 'react-icons/fi';
 import { useState } from 'react';
 
 import SecurityKeyForm from './NewSecurityKeyForm';
@@ -22,7 +22,7 @@ function AddSecurityKeyButton() {
           variant="ghost"
           className="h-9 gap-2 px-2 py-[0.375rem] hover:bg-[#d6eefb] dark:hover:bg-[#1e2942]"
         >
-          <Plus className="h-5 w-5" />
+          <FiPlus className="h-5 w-5" />
           Add New Security Key
         </Button>
       </DialogTrigger>

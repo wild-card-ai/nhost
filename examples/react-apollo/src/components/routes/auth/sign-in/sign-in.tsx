@@ -3,7 +3,7 @@ import SignInFooter from '@/components/auth/sign-in-footer'
 import { buttonVariants } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
-import { Fingerprint, Mail, RectangleEllipsis } from 'lucide-react'
+import { FiUnlock, FiMail, FiMoreHorizontal } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 export default function SignIn() {
@@ -20,7 +20,7 @@ export default function SignIn() {
             to={'/sign-in/security-key'}
             className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
           >
-            <Fingerprint className="w-4 h-4" />
+            <FiUnlock className="w-4 h-4" />
             <span className="flex-1 text-center">Continue with a security key</span>
           </Link>
 
@@ -28,7 +28,7 @@ export default function SignIn() {
             to={'/sign-in/magic-link'}
             className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
           >
-            <Mail className="w-4 h-4" />
+            <FiMail className="w-4 h-4" />
             <span className="flex-1 text-center">Continue with a magick link</span>
           </Link>
 
@@ -36,7 +36,7 @@ export default function SignIn() {
             to={'/sign-in/email-otp'}
             className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
           >
-            <RectangleEllipsis className="w-4 h-4" />
+            <FiMoreHorizontal className="w-4 h-4" />
             <span className="flex-1 text-center">Continue with OTP</span>
           </Link>
 

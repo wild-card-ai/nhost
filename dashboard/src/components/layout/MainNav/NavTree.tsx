@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/v3/button';
 import { useIsPlatform } from '@/features/orgs/projects/common/hooks/useIsPlatform';
 import { useOrgs, type Org } from '@/features/orgs/projects/hooks/useOrgs';
 import { cn } from '@/lib/utils';
-import { Box, ChevronDown, ChevronRight, Plus } from 'lucide-react';
+import { FiBox, FiChevronDown, FiChevronRight, FiPlus } from 'react-icons/fi';
 import Link from 'next/link';
 import { useMemo, type ReactElement } from 'react';
 
@@ -101,7 +101,7 @@ const projectPages = [
     slug: 'metrics',
   },
   {
-    name: 'Settings',
+    name: 'FiSettings',
     route: 'settings',
     slug: 'settings',
   },
@@ -209,7 +209,7 @@ const createOrganization = (org: Org, isPlatform: boolean) => {
     data: {
       name: 'New project',
       slug: 'new',
-      icon: <Plus className="mr-1 h-4 w-4 font-bold" strokeWidth={3} />,
+      icon: <FiPlus className="mr-1 h-4 w-4 font-bold" strokeWidth={3} />,
       targetUrl: `/orgs/${org.slug}/projects/new`,
       disabled: !isPlatform,
     },
@@ -224,7 +224,7 @@ const createOrganization = (org: Org, isPlatform: boolean) => {
       data: {
         name: app.name,
         slug: app.subdomain,
-        icon: <Box className="h-4 w-4" />,
+        icon: <FiBox className="h-4 w-4" />,
         targetUrl: `/orgs/${org.slug}/projects/${app.subdomain}`,
       },
       children: projectPages.map(
@@ -238,9 +238,9 @@ const createOrganization = (org: Org, isPlatform: boolean) => {
       result[`${org.slug}-${_app.subdomain}-${_page.slug}`] = {
         index: `${org.slug}-${_app.subdomain}-${_page.slug}`,
         canMove: false,
-        isFolder: _page.name === 'Settings',
+        isFolder: _page.name === 'FiSettings',
         children:
-          _page.name === 'Settings'
+          _page.name === 'FiSettings'
             ? projectSettingsPages.map(
                 (p) => `${org.slug}-${_app.subdomain}-settings-${p.slug}`,
               )
@@ -284,7 +284,7 @@ const createOrganization = (org: Org, isPlatform: boolean) => {
     isFolder: false,
     children: [],
     data: {
-      name: 'Settings',
+      name: 'FiSettings',
       targetUrl: `/orgs/${org.slug}/settings`,
       disabled: !isPlatform,
     },
@@ -403,9 +403,9 @@ export default function NavTree() {
             className="h-8 px-1"
           >
             {context.isExpanded ? (
-              <ChevronDown className="h-4 w-4 font-bold" strokeWidth={3} />
+              <FiChevronDown className="h-4 w-4 font-bold" strokeWidth={3} />
             ) : (
-              <ChevronRight className="h-4 w-4" strokeWidth={3} />
+              <FiChevronRight className="h-4 w-4" strokeWidth={3} />
             )}
           </Button>
         );

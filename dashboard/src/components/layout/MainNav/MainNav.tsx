@@ -7,7 +7,7 @@ import {
   SheetTitle,
 } from '@/components/ui/v3/sheet';
 import CreateOrgDialog from '@/features/orgs/components/CreateOrgFormDialog/CreateOrgFormDialog';
-import { Menu, Pin, PinOff, X } from 'lucide-react';
+import { FiMenu, FiBookmark, FiBookmark, FiX } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 import NavTree from './NavTree';
@@ -44,7 +44,7 @@ export default function MainNav({ container }: MainNavProps) {
         className="min- absolute left-0 z-[39] flex h-full w-6 justify-center border-r-[1px] bg-background pt-1 hover:bg-accent"
         onMouseEnter={() => setOpen(true)}
       >
-        <Menu className="h-4 w-4" />
+        <FiMenu className="h-4 w-4" />
       </div>
 
       <SheetContent
@@ -68,9 +68,9 @@ export default function MainNav({ container }: MainNavProps) {
             onClick={() => setMainNavPinned(!mainNavPinned)}
           >
             {mainNavPinned ? (
-              <PinOff className="h-5 w-5" />
+              <FiBookmark className="h-5 w-5" />
             ) : (
-              <Pin className="h-5 w-5" />
+              <FiBookmark className="h-5 w-5" />
             )}
           </Button>
 
@@ -79,7 +79,7 @@ export default function MainNav({ container }: MainNavProps) {
             className="flex sm:hidden"
             onClick={() => setOpen(false)}
           >
-            <X className="h-5 w-5" />
+            <FiX className="h-5 w-5" />
           </Button>
         </div>
 

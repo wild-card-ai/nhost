@@ -17,7 +17,7 @@ import { useIsPlatform } from '@/features/orgs/projects/common/hooks/useIsPlatfo
 import { useOrgs } from '@/features/orgs/projects/hooks/useOrgs';
 import { useSSRLocalStorage } from '@/hooks/useSSRLocalStorage';
 import { cn } from '@/lib/utils';
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -99,7 +99,7 @@ export default function OrgsComboBox() {
           ) : (
             'Select organization'
           )}
-          <ChevronsUpDown className="h-5 w-5 text-muted-foreground" />
+          <FiChevronsUp className="h-5 w-5 text-muted-foreground" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="p-0" side="bottom" align="start">
@@ -124,7 +124,7 @@ export default function OrgsComboBox() {
                     push(`/orgs/${option.value}/projects`);
                   }}
                 >
-                  <Check
+                  <FiCheck
                     className={cn(
                       'mr-2 h-4 w-4',
                       selectedItem?.value === option.value

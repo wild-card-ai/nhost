@@ -1,4 +1,4 @@
-import { Fingerprint, Mail } from 'lucide-react'
+import { FiUnlock, FiMail } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import SignInFooter from '@/components/auth/sign-in-footer'
@@ -20,7 +20,7 @@ export default function SignIn() {
             to={'/sign-in/security-key'}
             className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
           >
-            <Fingerprint className="w-4 h-4" />
+            <FiUnlock className="w-4 h-4" />
             <span className="flex-1 text-center">Continue with a security key</span>
           </Link>
 
@@ -28,7 +28,7 @@ export default function SignIn() {
             to={'/sign-in/magic-link'}
             className={cn(buttonVariants({ variant: 'outline' }), 'w-full')}
           >
-            <Mail className="w-4 h-4" />
+            <FiMail className="w-4 h-4" />
             <span className="flex-1 text-center">Continue with a magick link</span>
           </Link>
 

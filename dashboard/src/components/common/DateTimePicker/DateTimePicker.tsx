@@ -3,7 +3,7 @@
 import { TimePicker } from '@/components/common/TimePicker';
 
 import { Button } from '@/components/ui/v3/button';
-import { Calendar } from '@/components/ui/v3/calendar';
+import { FiCalendar } from '@/components/ui/v3/calendar';
 import {
   Popover,
   PopoverContent,
@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 import { guessTimezone } from '@/utils/timezoneUtils';
 import { TZDate } from '@date-fns/tz';
 import { add, format, parseISO } from 'date-fns-v4';
-import { Calendar as CalendarIcon } from 'lucide-react';
+import { FiCalendar as FiCalendar } from 'react-icons/fi';
 import { useState } from 'react';
 import TimezoneSettings from './TimezoneSettings';
 
@@ -117,14 +117,14 @@ function DateTimePicker({
           onClick={() => setOpen(true)}
         >
           {date ? dateString : <span>Pick a date</span>}
-          <CalendarIcon className="h-4 w-4" />
+          <FiCalendar className="h-4 w-4" />
         </Button>
       </PopoverTrigger>
 
       <PopoverContent className="w-auto p-0" align={align}>
         <div className="flex">
           <div className="flex">
-            <Calendar
+            <FiCalendar
               mode="single"
               selected={date}
               defaultMonth={date}

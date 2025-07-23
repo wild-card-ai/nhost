@@ -1,7 +1,7 @@
 import NavTree from '@/components/layout/MainNav/NavTree';
 import { Button } from '@/components/ui/v3/button';
 import CreateOrgDialog from '@/features/orgs/components/CreateOrgFormDialog/CreateOrgFormDialog';
-import { Pin, PinOff } from 'lucide-react';
+import { FiBookmark, FiBookmark } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 import { useTreeNavState } from './TreeNavStateContext';
@@ -56,9 +56,9 @@ export default function PinnedMainNav() {
           onClick={() => setMainNavPinned(!mainNavPinned)}
         >
           {mainNavPinned ? (
-            <PinOff className="h-5 w-5" />
+            <FiBookmark className="h-5 w-5" />
           ) : (
-            <Pin className="h-5 w-5" />
+            <FiBookmark className="h-5 w-5" />
           )}
         </Button>
       </div>

@@ -1,4 +1,4 @@
-import { Slash } from 'lucide-react';
+import { FiSlash } from 'react-icons/fi';
 import { useMemo } from 'react';
 
 import {
@@ -32,7 +32,7 @@ export default function BreadcrumbNav() {
     <Breadcrumb className="mt-2 flex w-full flex-row flex-nowrap overflow-x-auto lg:mt-0 lg:overflow-visible">
       <BreadcrumbList className="flex-nowrap">
         <BreadcrumbSeparator>
-          <Slash strokeWidth={3.5} className="text-muted-foreground/50" />
+          <FiSlash strokeWidth={3.5} className="text-muted-foreground/50" />
         </BreadcrumbSeparator>
 
         <BreadcrumbItem>
@@ -42,7 +42,7 @@ export default function BreadcrumbNav() {
         {showBreadcrumbs && (
           <>
             <BreadcrumbSeparator>
-              <Slash strokeWidth={3.5} className="text-muted-foreground/50" />
+              <FiSlash strokeWidth={3.5} className="text-muted-foreground/50" />
             </BreadcrumbSeparator>
 
             {projectPage && <OrgPagesComboBox />}
@@ -52,7 +52,7 @@ export default function BreadcrumbNav() {
         {showBreadcrumbs && appSubdomain && (
           <>
             <BreadcrumbSeparator>
-              <Slash strokeWidth={3.5} className="text-muted-foreground/50" />
+              <FiSlash strokeWidth={3.5} className="text-muted-foreground/50" />
             </BreadcrumbSeparator>
 
             <BreadcrumbItem>
@@ -60,7 +60,7 @@ export default function BreadcrumbNav() {
             </BreadcrumbItem>
 
             <BreadcrumbSeparator>
-              <Slash strokeWidth={3.5} className="text-muted-foreground/50" />
+              <FiSlash strokeWidth={3.5} className="text-muted-foreground/50" />
             </BreadcrumbSeparator>
 
             <BreadcrumbItem>
@@ -70,7 +70,7 @@ export default function BreadcrumbNav() {
             {isSettingsPage && (
               <>
                 <BreadcrumbSeparator>
-                  <Slash
+                  <FiSlash
                     strokeWidth={3.5}
                     className="text-muted-foreground/50"
                   />

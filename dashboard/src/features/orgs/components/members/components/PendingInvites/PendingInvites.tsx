@@ -39,7 +39,7 @@ import {
 } from '@/utils/__generated__/graphql';
 import { discordAnnounce } from '@/utils/discordAnnounce';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Inbox, TriangleAlert } from 'lucide-react';
+import { FiInbox, FiAlertTriangle } from 'react-icons/fi';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -72,7 +72,7 @@ export default function PendingInvites() {
     resolver: zodResolver(sendInviteFormSchema),
     defaultValues: {
       email: '',
-      role: Organization_Members_Role_Enum.User,
+      role: Organization_Members_Role_Enum.FiUser,
     },
   });
 
@@ -173,7 +173,7 @@ export default function PendingInvites() {
                 {orgInviteError && (
                   <Alert severity="error" className="mb-4">
                     <div className="flex flex-row items-center gap-2">
-                      <TriangleAlert className="h-4 w-4" strokeWidth={3} />
+                      <FiAlertTriangle className="h-4 w-4" strokeWidth={3} />
                       <span className="font-bold">Warning</span>
                     </div>
                     <p className="text-left">
@@ -264,7 +264,7 @@ export default function PendingInvites() {
 
         {!loading && organizationMemberInvites.length === 0 && (
           <div className="flex w-full flex-col items-center justify-center text-muted-foreground">
-            <Inbox />
+            <FiInbox />
             <p className="text-sm">No pending invites</p>
           </div>
         )}

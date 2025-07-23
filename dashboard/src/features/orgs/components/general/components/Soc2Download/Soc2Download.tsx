@@ -3,7 +3,7 @@ import { useCurrentOrg } from '@/features/orgs/projects/hooks/useCurrentOrg';
 import { execPromiseWithErrorToast } from '@/features/orgs/utils/execPromiseWithErrorToast';
 import { useNhostClient } from '@/providers/nhost';
 import { Organization_Status_Enum } from '@/utils/__generated__/graphql';
-import { Download } from 'lucide-react';
+import { FiDownload } from 'react-icons/fi';
 import { useState } from 'react';
 
 export default function Soc2Download() {
@@ -66,7 +66,7 @@ export default function Soc2Download() {
       <div className="flex w-full flex-col gap-4 p-4">
         <div className="flex flex-col gap-2">
           <p className="text-sm text-muted-foreground">
-            Download Nhost&apos;s SOC2 Type II compliance report. This report
+            FiDownload Nhost&apos;s SOC2 Type II compliance report. This report
             demonstrates our commitment to security controls.
           </p>
         </div>
@@ -78,8 +78,8 @@ export default function Soc2Download() {
             variant="outline"
             className="flex items-center gap-2"
           >
-            <Download className="h-4 w-4" />
-            {downloading ? 'Downloading...' : 'Download SOC2 Report'}
+            <FiDownload className="h-4 w-4" />
+            {downloading ? 'Downloading...' : 'FiDownload SOC2 Report'}
           </Button>
         </div>
       </div>

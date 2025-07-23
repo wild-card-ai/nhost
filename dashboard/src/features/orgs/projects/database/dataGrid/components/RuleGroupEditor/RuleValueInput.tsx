@@ -1,4 +1,4 @@
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 
 import { Button } from '@/components/ui/v3/button';
 import {
@@ -148,8 +148,8 @@ export default function RuleValueInput({
   const availableHasuraPermissionVariables = getAllPermissionVariables(
     data?.config?.auth?.session?.accessToken?.customClaims,
   ).map(({ key }) => ({
-    value: `X-Hasura-${key}`,
-    label: `X-Hasura-${key}`,
+    value: `FiX-Hasura-${key}`,
+    label: `FiX-Hasura-${key}`,
     group: 'Frequently used',
   }));
 
@@ -201,7 +201,7 @@ export default function RuleValueInput({
           className="justify-between"
         >
           <span className="truncate">{comboboxLabel}</span>
-          <ChevronsUpDown className="h-5 min-h-5 w-5 min-w-5 opacity-50" />
+          <FiChevronsUp className="h-5 min-h-5 w-5 min-w-5 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent
@@ -225,7 +225,7 @@ export default function RuleValueInput({
                   }}
                 >
                   {variable.label}
-                  <Check
+                  <FiCheck
                     className={cn(
                       'ml-auto',
                       comboboxValue === variable.value

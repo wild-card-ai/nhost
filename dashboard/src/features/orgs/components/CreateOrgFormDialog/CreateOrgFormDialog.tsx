@@ -36,7 +36,7 @@ import {
 } from '@/utils/__generated__/graphql';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { DialogDescription } from '@radix-ui/react-dialog';
-import { Plus } from 'lucide-react';
+import { FiPlus } from 'react-icons/fi';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -263,7 +263,7 @@ export default function CreateOrgDialog({
             )}
             onClick={() => setStripeClientSecret('')}
           >
-            <Plus className="h-4 w-4 font-bold" strokeWidth={3} />
+            <FiPlus className="h-4 w-4 font-bold" strokeWidth={3} />
             New Organization
           </Button>
         </DialogTrigger>

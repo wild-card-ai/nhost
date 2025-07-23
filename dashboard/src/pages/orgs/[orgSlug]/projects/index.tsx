@@ -4,7 +4,7 @@ import { ProjectsGrid } from '@/features/orgs/components/projects/projects-grid'
 import { OrgLayout } from '@/features/orgs/layout/OrgLayout';
 import { useCurrentOrg } from '@/features/orgs/projects/hooks/useCurrentOrg';
 import { useGetProjectsQuery } from '@/utils/__generated__/graphql';
-import { Plus } from 'lucide-react';
+import { FiPlus } from 'react-icons/fi';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
 
@@ -47,7 +47,7 @@ export default function OrgProjects() {
           <Button asChild>
             <Link href={`/orgs/${currentOrg?.slug}/projects/new`}>
               <div className="flex h-fit flex-row items-center justify-center space-x-2">
-                <Plus className="h-5 w-5" strokeWidth={2} />
+                <FiPlus className="h-5 w-5" strokeWidth={2} />
                 <span>Create your first project</span>
               </div>
             </Link>

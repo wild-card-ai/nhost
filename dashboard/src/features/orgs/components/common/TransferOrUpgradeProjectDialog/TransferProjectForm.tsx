@@ -25,7 +25,7 @@ import {
   useBillingTransferAppMutation,
 } from '@/utils/__generated__/graphql';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Plus } from 'lucide-react';
+import { FiPlus } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -150,7 +150,7 @@ function TransferProjectForm({
                   ))}
                   <SelectItem key={CREATE_NEW_ORG} value={CREATE_NEW_ORG}>
                     <div className="flex items-center justify-center gap-2">
-                      <Plus className="h-4 w-4 font-bold" strokeWidth={3} />{' '}
+                      <FiPlus className="h-4 w-4 font-bold" strokeWidth={3} />{' '}
                       <span>New Organization</span>
                     </div>
                   </SelectItem>

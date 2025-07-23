@@ -1,7 +1,7 @@
 import { TimezonePicker } from '@/components/common/TimezonePicker';
 import { Button } from '@/components/ui/v3/button';
 import { getUTCOffsetInHours, guessTimezone } from '@/utils/timezoneUtils';
-import { Settings2 } from 'lucide-react';
+import { FiSettings } from 'react-icons/fi';
 import { useState } from 'react';
 
 interface Props {
@@ -35,7 +35,7 @@ function TimezoneSettings({ dateTime, onTimezoneChange }: Props) {
             aria-label="Open timezone settings"
             data-testid="timezoneSettingsButton"
           >
-            <Settings2 className="h-4 w-4 dark:text-foreground" />
+            <FiSettings className="h-4 w-4 dark:text-foreground" />
           </Button>
         }
       />

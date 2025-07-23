@@ -1,4 +1,4 @@
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { FiCheck, FiChevronsUp } from 'react-icons/fi';
 
 import { Button } from '@/components/ui/v3/button';
 import {
@@ -95,12 +95,12 @@ export default function OperatorComboBox({
           className="justify-between"
         >
           {operator ?? 'Select operator...'}
-          <ChevronsUpDown className="h-5 w-5 opacity-50" />
+          <FiChevronsUp className="h-5 w-5 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent side="bottom" align="start" className="p-0">
         <Command>
-          <CommandInput placeholder="Search operator..." />
+          <CommandInput placeholder="FiSearch operator..." />
           <CommandList>
             <CommandEmpty>No operator found.</CommandEmpty>
             <CommandGroup>
@@ -118,7 +118,7 @@ export default function OperatorComboBox({
                       {op.helperText}
                     </span>
                   </div>
-                  <Check
+                  <FiCheck
                     className={cn(
                       'ml-auto',
                       op.value === operator ? 'opacity-100' : 'opacity-0',
