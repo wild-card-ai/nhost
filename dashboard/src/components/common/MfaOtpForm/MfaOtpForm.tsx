@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import { Input } from '@/components/ui/v3/input';
 import { getToastStyleProps } from '@/utils/constants/settings';
 import {

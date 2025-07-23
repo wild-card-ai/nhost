@@ -1,5 +1,5 @@
 import { TimezonePicker } from '@/components/common/TimezonePicker';
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import { getUTCOffsetInHours, guessTimezone } from '@/utils/timezoneUtils';
 import { Settings2 } from 'lucide-react';
 import { useState } from 'react';

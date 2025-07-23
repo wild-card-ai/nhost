@@ -6,7 +6,7 @@ import { MobileNav } from '@/components/layout/MobileNav';
 import { Logo } from '@/components/presentational/Logo';
 import { Box } from '@/components/ui/v2/Box';
 import { GraphiteIcon } from '@/components/ui/v2/icons/GraphiteIcon';
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import { AnnouncementsTray } from '@/features/orgs/components/members/components/AnnouncementsTray';
 import { NotificationsTray } from '@/features/orgs/components/members/components/NotificationsTray';
 import { DevAssistant } from '@/features/orgs/projects/ai/DevAssistant';

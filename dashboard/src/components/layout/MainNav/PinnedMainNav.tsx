@@ -1,5 +1,5 @@
 import NavTree from '@/components/layout/MainNav/NavTree';
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import CreateOrgDialog from '@/features/orgs/components/CreateOrgFormDialog/CreateOrgFormDialog';
 import { Pin, PinOff } from 'lucide-react';
 import { useRouter } from 'next/router';

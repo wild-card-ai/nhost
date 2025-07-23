@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@/components/ui/v3/button';
+import { Button, type ButtonProps } from '@/components/ui/v2/Button';
 import { isNotEmptyValue } from '@/lib/utils';
 import { copy } from '@/utils/copy';
 import { clsx } from 'clsx';
