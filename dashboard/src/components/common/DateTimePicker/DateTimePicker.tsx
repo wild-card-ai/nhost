@@ -2,7 +2,7 @@
 
 import { TimePicker } from '@/components/common/TimePicker';
 
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import { Calendar } from '@/components/ui/v3/calendar';
 import {
   Popover,

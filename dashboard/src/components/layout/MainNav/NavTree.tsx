@@ -11,7 +11,7 @@ import { ServicesIcon } from '@/components/ui/v2/icons/ServicesIcon';
 import { StorageIcon } from '@/components/ui/v2/icons/StorageIcon';
 import { UserIcon } from '@/components/ui/v2/icons/UserIcon';
 import { Badge } from '@/components/ui/v3/badge';
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import { useIsPlatform } from '@/features/orgs/projects/common/hooks/useIsPlatform';
 import { useOrgs, type Org } from '@/features/orgs/projects/hooks/useOrgs';
 import { cn } from '@/lib/utils';

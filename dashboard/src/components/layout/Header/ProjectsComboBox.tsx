@@ -1,5 +1,5 @@
 import ProjectStatus from '@/components/layout/Header/ProjectStatus';
-import { Button } from '@/components/ui/v3/button';
+import { Button } from '@/components/ui/v2/Button';
 import {
   Command,
   CommandEmpty,
