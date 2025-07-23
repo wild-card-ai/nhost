@@ -1,6 +1,6 @@
 'use client';
 
-import { X } from 'lucide-react';
+import { FiX } from 'react-icons/fi';
 
 import { Badge } from '@/components/ui/v3/badge';
 import {
@@ -133,7 +133,7 @@ export function FancyMultiSelect({
                   }}
                   onClick={() => handleUnselect(option)}
                 >
-                  <X className="h-3 w-3 text-muted-foreground hover:text-foreground" />
+                  <FiX className="h-3 w-3 text-muted-foreground hover:text-foreground" />
                 </button>
               </Badge>
             );
