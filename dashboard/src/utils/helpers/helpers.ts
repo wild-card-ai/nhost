@@ -91,7 +91,7 @@ export type DeepRequired<T> = {
 /**
  * Recursively removes the property '__typename' from a JavaScript object and its nested objects and arrays.
  */
-export const removeTypename = (obj: any) => {
+export const removeTypename = (obj: Record<string, any> | any[]): Record<string, any> | any[] => {
   if (!obj || typeof obj !== 'object') {
     return obj;
   }
